@@ -48,7 +48,7 @@ define amazon_s3::s3_mount (
   }
 
   # mount the s3 bucket
-  mount { $title:
+  s3mount { $title:
     ensure    => $ensure,
     name      => $mount_point,
     device    => "s3fs#${s3_bucket_name}",
