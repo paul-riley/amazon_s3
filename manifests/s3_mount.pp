@@ -49,12 +49,12 @@ define amazon_s3::s3_mount (
 
   # mount the s3 bucket
   mount { $title:
-    ensure   => $ensure,
-    name     => $mount_point,
-    device   => "s3fs#${s3_bucket_name}",
-    fstype   => 'fuse',
-    options  => $new_options,
-    remounts => false,
-    require  => File[$mount_point],
+    ensure    => $ensure,
+    name      => $mount_point,
+    device    => "s3fs#${s3_bucket_name}",
+    fstype    => 'fuse',
+    options   => $new_options,
+    remounts  => true,
+    subscribe => File[$mount_point],
   }
 }
