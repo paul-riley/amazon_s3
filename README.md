@@ -1,11 +1,9 @@
 # amazon_s3
 
-[![Puppet Forge](http://img.shields.io/puppetforge/v/landcareresearch/amazon_s3.svg)](https://forge.puppetlabs.com/landcaresearch/amazon_s3)
-[![Bitbucket Build Status](http://build.landcareresearch.co.nz/app/rest/builds/buildType%3A%28id%3ALinuxAdmin_PuppetAmazonS3_PuppetAmazonS3%29/statusIcon)](http://build.landcareresearch.co.nz/viewType.html?buildTypeId=LinuxAdmin_PuppetAmazonS3_PuppetAmazonS3&guest=1)
 
 ## Overview
 
-Manages mounting s3 buckets.
+Manages mounting s3 buckets. This was cloned from the [Amazon S3 Project](https://bitbucket.org/landcareresearch/puppet-amazon-s3)
 
 ## Module Description
 
@@ -52,8 +50,8 @@ See REFERENCE.md for details.
 
 ## Limitations
 
-Only works with debian and redhat based OS's.
+Only works with Debian and RedHat based OS's.
 
 ## Development
 
-The module is open source and available on [Bitbucket](https://bitbucket.org/landcareresearch/puppet-amazon-s3).  Please fork!
+The module is open source and available at [GitHub](https://github.com/paul-riley/amazon_s3).  Please fork or contribute :)

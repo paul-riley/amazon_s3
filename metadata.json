@@ -1,12 +1,12 @@
 {
   "name": "priley-amazon_s3",
-  "version": "6.1.1",
+  "version": "6.1.2",
   "author": "Paul Riley",
   "summary": "Manages mounting S3 buckets",
   "license": "GPL-3.0+",
-  "source": "https://github.com/paul-riley/puppet-amazon-s3",
-  "project_page": "https://github.com/paul-riley/puppet-amazon-s3",
-  "issues_url": "https://github.com/paul-riley/puppet-amazon-s3/issues",
+  "source": "https://github.com/paul-riley/amazon_s3/",
+  "project_page": "https://github.com/paul-riley/amazon_s3/",
+  "issues_url": "https://github.com/paul-riley/amazon_s3//issues",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
