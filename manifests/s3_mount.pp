@@ -20,15 +20,15 @@
 # @param s3_bucket_name
 #   The name of the s3 bucket. By default, it uses the title.
 #
-define amazon_s3::s3_mount(
+define amazon_s3::s3_mount (
   $mount_point,
   String $ensure                       = 'mounted',
   String $options                      = '_netdev,nonempty,allow_other,multireq_max=5',
   Optional[String] $aws_access_key     = undef,
   Optional[String] $secret_access_key  = undef,
   String $s3_bucket_name               = $title,
-){
-
+) {
+  #
   if $aws_access_key and $secret_access_key {
     $creds_file = "${amazon_s3::s3fs_cred_dir}/${s3_bucket_name}"
     file {$creds_file:
@@ -39,12 +39,12 @@ define amazon_s3::s3_mount(
       before  => File[$mount_point],
     }
     $new_options = "${options},passwd_file=${creds_file}"
-  }else{
+  } else {
     $new_options = $options
   }
 
 
-  file{$mount_point:
+  file{ $mount_point:
     ensure => directory,
   }
 

@@ -1,7 +1,7 @@
 # @summary Installs the required software
 #
 class amazon_s3::install {
-
+  #
   if str2bool($amazon_s3::include_mime_package) {
     $packages = concat($amazon_s3::params::base_packages,
     ['mime-support','libtool'])
@@ -12,7 +12,7 @@ class amazon_s3::install {
   ensure_packages($packages)
 
   if $amazon_s3::use_system_package {
-    package{$amazon_s3::s3fs_package:
+    package{ $amazon_s3::s3fs_package:
       ensure  => latest,
       require => Package[$packages],
     }

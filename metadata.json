@@ -1,20 +1,20 @@
 {
-  "name": "landcareresearch-amazon_s3",
-  "version": "0.1.4",
-  "author": "Landcare Research",
+  "name": "priley-amazon_s3",
+  "version": "6.1.0",
+  "author": "Paul Riley",
   "summary": "Manages mounting S3 buckets",
   "license": "GPL-3.0+",
-  "source": "https://bitbucket.org/landcareresearch/puppet-amazon-s3",
-  "project_page": "https://bitbucket.org/landcareresearch/puppet-amazon-s3",
-  "issues_url": "https://bitbucket.org/landcareresearch/puppet-amazon-s3/issues",
+  "source": "https://github.com/paul-riley/puppet-amazon-s3",
+  "project_page": "https://github.com/paul-riley/puppet-amazon-s3",
+  "issues_url": "https://github.com/paul-riley/puppet-amazon-s3/issues",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": ">= 5.0.0 < 7.0.0"
+      "version_requirement": ">= 5.0.0 < 10.0.0"
     },
     {
       "name": "puppetlabs/vcsrepo",
-      "version_requirement": ">= 3.0.0 < 4.0.0"
+      "version_requirement": ">= 3.0.0 < 7.0.0"
     }
   ],
   "operatingsystem_support": [
@@ -23,7 +23,9 @@
       "operatingsystemrelease": [
         "14.04",
         "16.04",
-        "18.04"
+        "18.04",
+        "20.04",
+        "22.04"
       ]
     },
     {
@@ -31,12 +33,42 @@
       "operatingsystemrelease": [
         "7"
       ]
-    }
+    },
+    {
+      "operatingsystem": "AlmaLinux",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Rocky",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
   ],
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.7.0 < 7.0.0"
+      "version_requirement": ">= 4.7.0 < 9.0.0"
     }
   ],
   "pdk-version": "1.18.1",

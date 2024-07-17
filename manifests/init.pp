@@ -37,14 +37,14 @@ class amazon_s3 (
   $s3fs_cred_dir = '/etc/s3fs.d'
 
   # Check supported operating systems
-  unless $::osfamily == 'debian' or $::osfamily == 'RedHat' {
-    fail("Unsupported OS ${::osfamily}.\
-      Please use a debian or redhat based system")
+  unless $facts['os']['family'] == 'debian' or $facts['os']['family'] == 'RedHat' {
+  fail("Unsupported OS ${facts['os']['family']}.\
+    Please use a debian or redhat based system")
   }
 
   contain amazon_s3::install
 
-  class{'amazon_s3::config':
+  class{ 'amazon_s3::config':
     require => Class['amazon_s3::install'],
   }
   contain amazon_s3::config

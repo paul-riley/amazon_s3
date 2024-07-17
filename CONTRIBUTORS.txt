@@ -2,3 +2,4 @@ Michael Speth <spethm@landcareresearch.co.nz>
 Bren Briggs <http://brenbriggs.com>
 Lukasz Klimek <https://bitbucket.org/lklimek>
 Tim Miller <https://bitbucket.org/dutsmiller>
+Paul Riley <https://github.com/paul-riley>
