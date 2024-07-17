@@ -31,7 +31,7 @@ define amazon_s3::s3_mount (
   #
   if $aws_access_key and $secret_access_key {
     $creds_file = "${amazon_s3::s3fs_cred_dir}/${s3_bucket_name}"
-    file {$creds_file:
+    file { $creds_file:
       ensure  => file,
       content => inline_template("${aws_access_key}:${secret_access_key}"),
       mode    => '0600',
@@ -43,8 +43,7 @@ define amazon_s3::s3_mount (
     $new_options = $options
   }
 
-
-  file{ $mount_point:
+  file { $mount_point:
     ensure => directory,
   }
 

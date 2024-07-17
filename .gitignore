@@ -16,7 +16,7 @@
 /log/
 /pkg/
 /spec/fixtures/manifests/
-/spec/fixtures/modules/
+/spec/fixtures/modules/*
 /tmp/
 /vendor/
 /convert_report.txt
@@ -25,6 +25,4 @@
 .project
 .envrc
 /inventory.yaml
-vagrant/.vagrant
-vagrant/results.txt
-vagrant/*.log
+/spec/fixtures/litmus_inventory.yaml

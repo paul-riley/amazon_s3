@@ -1,8 +1,8 @@
 # @summary Configures the mounts for amazon s3.
 #
 class amazon_s3::config {
-
-  file{ $amazon_s3::s3fs_cred_dir:
+  #
+  file { $amazon_s3::s3fs_cred_dir:
     ensure => directory,
     mode   => '0750',
   }

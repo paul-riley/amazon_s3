@@ -27,7 +27,6 @@ class amazon_s3 (
   Boolean          $include_mime_package = $amazon_s3::params::include_mime_package,
   Boolean          $use_system_package   = false,
 ) inherits amazon_s3::params {
-
   # == Variables == #
 
   # The source directory for compiling s3fs
@@ -44,7 +43,7 @@ class amazon_s3 (
 
   contain amazon_s3::install
 
-  class{ 'amazon_s3::config':
+  class { 'amazon_s3::config':
     require => Class['amazon_s3::install'],
   }
   contain amazon_s3::config
