@@ -14,7 +14,7 @@ Puppet::Type.type(:s3mount).provide(
   default_target: fstab,
   filetype: :flat,
 ) do
-  include Puppet::Provider::Mount
+  include Puppet::Provider::S3mount
 
   @doc = 'Manages filesystem mounts'
 
@@ -239,7 +239,7 @@ Puppet::Type.type(:s3mount).provide(
     # Update fstab entries that are mounted
     providers.each do |prov|
       if mounts.delete(name: prov.get(:name), mounted: :yes)
-        prov.set(ensure: :mounted)
+        prov.set(ensure: :s3mount)
       end
     end
 
@@ -266,7 +266,7 @@ Puppet::Type.type(:s3mount).provide(
       when :absent # Mount not in fstab
         mount.provider.set(ensure: :ghost)
       when :unmounted # Mount in fstab
-        mount.provider.set(ensure: :mounted)
+        mount.provider.set(ensure: :s3munt)
       end
     end
   end
