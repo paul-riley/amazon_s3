@@ -2,7 +2,7 @@ require 'puppet'
 
 # A module just to store the mount/unmount methods.  Individual providers
 # still need to add the mount commands manually.
-module Puppet::Provider::Mount
+module Puppet::Provider::S3mount
   # This only works when the mount point is synced to the fstab.
   def mount
     args = []
