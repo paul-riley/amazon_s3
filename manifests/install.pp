@@ -20,7 +20,7 @@ class amazon_s3::install {
     vcsrepo { $amazon_s3::s3fs_src_dir:
       ensure   => 'present',
       provider => 'git',
-      source   => 'git@github.com:s3fs-fuse/s3fs-fuse.git',
+      source   => 'https://github.com/s3fs-fuse/s3fs-fuse.git',
       revision => $amazon_s3::s3fs_version,
       require  => Package[$packages],
     }
