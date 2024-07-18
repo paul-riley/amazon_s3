@@ -266,7 +266,7 @@ Puppet::Type.type(:s3mount).provide(
       when :absent # Mount not in fstab
         mount.provider.set(ensure: :ghost)
       when :unmounted # Mount in fstab
-        mount.provider.set(ensure: :s3munt)
+        mount.provider.set(ensure: :mounted)
       end
     end
   end

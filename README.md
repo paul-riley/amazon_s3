@@ -46,7 +46,7 @@ Creates a mount with default parameters.
 
 ## API
 
-See REFERENCE.md for details.
+See REFERENCE for details.
 
 ## Limitations
 

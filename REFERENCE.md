@@ -14,6 +14,10 @@
 
 * [`amazon_s3::s3_mount`](#amazon_s3s3_mount): The individual s3 mount.
 
+**Resource types**
+
+* [`s3mount`](#s3mount): A special mount type that fixes bug in mount for Amazon Linux.
+
 ## Classes
 
 ### amazon_s3
@@ -136,4 +140,14 @@ Data type: `String`
 The name of the s3 bucket. By default, it uses the title.
 
 Default value: $title
+
+# Types
+
+Custom types available
+
+## `s3mount`
+
+Mount type for Linux OS's. Fixed bug in Mount with Amazon Linux 2
+
+
 
